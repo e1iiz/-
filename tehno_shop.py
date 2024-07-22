@@ -183,7 +183,7 @@ async def order(message: types.Message):
 async def get_contact(message: types.Message):
     contact_info = f"Контакт: {message.contact.phone_number}, Имя: {message.contact.first_name}, Фамилия: {message.contact.last_name}"
     await message.answer(contact_info)
-    await bot.send_message(1836987628, contact_info)
+    await bot.send_message(-4267715696, contact_info)
     await message.answer("Артикул товара который вы хотите заказать:")
 
 @dp.message_handler(text="Назад")
