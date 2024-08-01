@@ -15,8 +15,12 @@ quotes=['Что разум человека может постигнуть и �
 
 # random_quotes=random.choice(quotes)
 
+@dp.message_handler(commands='start')
+async def start(message:types.Message):
+    await message.answer("Введите команду /quote , чтобы получить случайные цитаты.")
+
 @dp.message_handler(commands='quote')
-async def start(message: types.Message):
+async def quote(message: types.Message):
     random_quotes=random.choice(quotes)
     await message.answer(random_quotes)
 
